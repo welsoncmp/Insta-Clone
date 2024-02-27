@@ -1,4 +1,4 @@
-# insta_clone
+# Insta-Clone
 
 Projeto - clone do instagram em flutter
 
