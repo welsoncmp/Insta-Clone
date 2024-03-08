@@ -1,12 +1,27 @@
 # Insta-Clone
 
-Projeto - clone do instagram em flutter
+Projeto - Clone do instagram em flutter
 
-![image](https://github.com/welsoncmp/Insta-Clone/assets/42895405/e8713e10-340c-4e31-b2e9-e7625248318a)  
+1 - Feed  
 
-![image](https://github.com/welsoncmp/Insta-Clone/assets/42895405/a35d1b6a-bc62-40cf-bf19-5eaa2857e2a5)  
+![image](https://github.com/welsoncmp/Insta-Clone/assets/42895405/c700038e-cac4-43fa-be48-b1d8c0351176)  
 
-![image](https://github.com/welsoncmp/Insta-Clone/assets/42895405/d4e27f28-987b-4ae1-b153-3e4a6fb90e6d)  
+2 - Search  
+
+![image](https://github.com/welsoncmp/Insta-Clone/assets/42895405/edacef5a-81bf-42b3-ae28-b89caf733d71)  
+
+3 - Reels  
+
+![image](https://github.com/welsoncmp/Insta-Clone/assets/42895405/2de82556-601f-4ec9-9d07-de8c208f6042)  
+
+4 - Profile  
+
+![image](https://github.com/welsoncmp/Insta-Clone/assets/42895405/e8032b7e-f16e-48ad-961d-942664bfde7d)
+
+
+
+
+
 
 
 
