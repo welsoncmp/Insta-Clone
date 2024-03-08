@@ -50,7 +50,7 @@ class _InicioState extends State<Inicio> {
             BottomNavigationBarItem(icon: Image.asset('assets/icons/procurar.png',width: 25.0), label: ''),
             BottomNavigationBarItem(icon: Image.asset('assets/icons/postagem-no-instagram.png',width: 25.0), label: ''),
             BottomNavigationBarItem(icon: Image.asset('assets/icons/video.png',width: 25.0), label: ''),
-            BottomNavigationBarItem(icon: Image.asset('assets/icons/perfil.png',width: 25.0), label: ''),
+            BottomNavigationBarItem(icon: Container(width: 30, height: 30, decoration: BoxDecoration(borderRadius: BorderRadius.circular(50), color: Colors.white, image: const DecorationImage(image: AssetImage('assets/images/04.jpeg'), fit: BoxFit.cover),),), label: ''),
           ]
       ),
     );

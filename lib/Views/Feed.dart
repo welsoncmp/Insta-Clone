@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:insta_clone/Views/Stories.dart';
 
@@ -11,32 +12,32 @@ class Feed extends StatefulWidget {
 class _FeedState extends State<Feed> {
   List<Map<String, String>> feed = [
     {
-      'nome': 'Nome usuário 1',
-      'imagem': 'https://avatars.githubusercontent.com/u/42895405?v=4',
+      'nome': 'welsoncmp',
+      'imagem': 'assets/images/01.jpeg',
       'curtidas': '325',
       'comentarios': '32'
     },
     {
-      'nome': 'Nome usuário 2',
-      'imagem': 'https://avatars.githubusercontent.com/u/42895405?v=4',
+      'nome': 'welsoncmp',
+      'imagem': 'assets/images/05.jpeg',
       'curtidas': '213',
       'comentarios': '12'
     },
     {
-      'nome': 'Nome usuário 3',
-      'imagem': 'https://avatars.githubusercontent.com/u/42895405?v=4',
+      'nome': 'welsoncmp',
+      'imagem': 'assets/images/04.jpeg',
       'curtidas': '265',
       'comentarios': '45'
     },
     {
-      'nome': 'Nome usuário 4',
-      'imagem': 'https://avatars.githubusercontent.com/u/42895405?v=4',
+      'nome': 'welsoncmp',
+      'imagem': 'assets/images/03.jpeg',
       'curtidas': '32',
       'comentarios': '50'
     },
     {
-      'nome': 'Nome usuário 5',
-      'imagem': 'https://avatars.githubusercontent.com/u/42895405?v=4',
+      'nome': 'welsoncmp',
+      'imagem': 'assets/images/05.jpeg',
       'curtidas': '41',
       'comentarios': '10'
     },
@@ -59,17 +60,18 @@ class _FeedState extends State<Feed> {
                 child: Image.asset('assets/icons/mensagem.png', width: 20.0),
               ),
             ],
-            floating: true, // O AppBar ficará flutuante
-            snap:
-                true, // Ele irá "saltar" para a posição quando você rolar para cima
+            floating: true,
+            snap: true,
           ),
           SliverList(
             delegate: SliverChildListDelegate([
+
               const SizedBox(
-                height: 120,
+                height: 130,
                 child: Stories(),
               ),
               postsFeed()
+
             ]),
           ),
         ],
@@ -90,7 +92,7 @@ class _FeedState extends State<Feed> {
               Stack(
                 alignment: Alignment.center,
                 children: [
-                  Card(elevation: 3, child: Image.network(post['imagem']!)),
+                  Card(elevation: 3, child: Image.asset(post['imagem']!)),
                   Positioned(
                     top: 0,
                     child: Container(
@@ -108,7 +110,7 @@ class _FeedState extends State<Feed> {
                                   borderRadius: BorderRadius.circular(50),
                                   color: Colors.white,
                                   image: DecorationImage(
-                                      image: NetworkImage(post['imagem']!)),
+                                      image: AssetImage(post['imagem']!), fit: BoxFit.cover),
                                 ),
                               ),
                               Padding(

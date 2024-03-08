@@ -12,6 +12,39 @@ class _VideosState extends State<Videos> {
   final PageController _pageController = PageController();
   late bool _showAppBar = true;
 
+  List<Map<String, String>> videos = [
+    {
+      'nome': 'Nome usuário 1',
+      'imagem': 'assets/images/01.jpeg',
+      'curtidas': '325',
+      'comentarios': '32'
+    },
+    {
+      'nome': 'Nome usuário 2',
+      'imagem': 'assets/images/05.jpeg',
+      'curtidas': '213',
+      'comentarios': '12'
+    },
+    {
+      'nome': 'Nome usuário 3',
+      'imagem': 'assets/images/03.jpeg',
+      'curtidas': '265',
+      'comentarios': '45'
+    },
+    {
+      'nome': 'Nome usuário 4',
+      'imagem': 'assets/images/04.jpeg',
+      'curtidas': '32',
+      'comentarios': '50'
+    },
+    {
+      'nome': 'Nome usuário 4',
+      'imagem': 'assets/images/02.jpeg',
+      'curtidas': '32',
+      'comentarios': '50'
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +66,7 @@ class _VideosState extends State<Videos> {
             PageView.builder(
               controller: _pageController,
               scrollDirection: Axis.vertical,
-              itemCount: 10,
+              itemCount: videos.length,
               itemBuilder: (BuildContext context, int index) {
                 return reels(context, index);
               },
@@ -78,18 +111,13 @@ class _VideosState extends State<Videos> {
   }
 
   Widget reels(BuildContext context, int index) {
+    var post = videos[index];
     return Stack(
       children: [
-        Container(
-          color: Colors.green,
+        SizedBox(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
-          child: Center(
-            child: Text(
-              index.toString(),
-              style: const TextStyle(color: Colors.white),
-            ),
-          ),
+          child: Image.asset(post['imagem']!, fit: BoxFit.cover,),
         ),
         Padding(
           padding: const EdgeInsets.only(bottom: 10),
@@ -118,14 +146,16 @@ class _VideosState extends State<Videos> {
                                   height: 35,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(50),
-                                    image: const DecorationImage(
-                                        image: AssetImage('assets/icons/perfil.png')),
+                                    image: DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image: AssetImage(post['imagem']!),
+                                    ),
                                   ),
                                 ),
                               ),
                               const Padding(
                                 padding: EdgeInsets.only(left: 5, top: 10),
-                                child: Text('usuariox',
+                                child: Text('welsoncmp',
                                     style: TextStyle(
                                         fontSize: 10,
                                         fontWeight: FontWeight.bold,
@@ -173,8 +203,10 @@ class _VideosState extends State<Videos> {
                                     height: 15,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(50),
-                                      image: const DecorationImage(
-                                          image: AssetImage('assets/icons/perfil.png')),
+                                      image: DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: AssetImage(post['imagem']!),
+                                      ),
                                     ),
                                   ),
                                   Container(
@@ -182,8 +214,10 @@ class _VideosState extends State<Videos> {
                                     height: 15,
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(50),
-                                      image: const DecorationImage(
-                                          image: AssetImage('assets/icons/perfil.png')),
+                                      image: DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: AssetImage(post['imagem']!),
+                                      ),
                                     ),
                                   ),
                                 ],
@@ -192,7 +226,7 @@ class _VideosState extends State<Videos> {
 
                             const Padding(
                               padding: EdgeInsets.only(left: 10),
-                              child: Text('Curtido por usuarioy e outras 525 pessoas', style: TextStyle(fontSize: 7, color: Colors.white70),),
+                              child: Text('Curtido por welsoncmp e outras 525 pessoas', style: TextStyle(fontSize: 7, color: Colors.white70),),
                             )
                           ],
                         ),
@@ -306,7 +340,10 @@ class _VideosState extends State<Videos> {
                                 color: Colors.white,
                                 style: BorderStyle.solid
                             ),
-                            image: const DecorationImage(image: AssetImage('assets/icons/perfil.png')),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage(post['imagem']!),
+                            ),
                             borderRadius: BorderRadius.circular(5),
                           ),
                         ),

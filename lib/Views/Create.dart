@@ -10,10 +10,12 @@ class Create extends StatefulWidget {
 class _CreateState extends State<Create> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text("Tela em construção"),
-      ),
+    return Scaffold(
+      body: SizedBox(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        child: Image.asset('assets/images/05.jpeg', fit: BoxFit.cover,),
+      )
     );
   }
 }

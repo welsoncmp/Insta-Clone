@@ -8,6 +8,41 @@ class Search extends StatefulWidget {
 }
 
 class _SearchState extends State<Search> {
+
+  List<Map<String, String>> retorno = [
+    {
+      'nome': 'welsoncmp',
+      'imagem': 'assets/images/01.jpeg',
+      'curtidas': '325',
+      'comentarios': '32'
+    },
+    {
+      'nome': 'welsoncmp',
+      'imagem': 'assets/images/05.jpeg',
+      'curtidas': '213',
+      'comentarios': '12'
+    },
+    {
+      'nome': 'welsoncmp',
+      'imagem': 'assets/images/03.jpeg',
+      'curtidas': '265',
+      'comentarios': '45'
+    },
+    {
+      'nome': 'welsoncmp',
+      'imagem': 'assets/images/04.jpeg',
+      'curtidas': '32',
+      'comentarios': '50'
+    },
+    {
+      'nome': 'welsoncmp',
+      'imagem': 'assets/images/02.jpeg',
+      'curtidas': '32',
+      'comentarios': '50'
+    },
+  ];
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,22 +79,21 @@ class _SearchState extends State<Search> {
           SliverGrid(
             gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
               maxCrossAxisExtent: 200.0,
-              mainAxisSpacing: 0.5,
-              crossAxisSpacing: 5.0,
-              childAspectRatio: 1.0,
+              mainAxisSpacing: 0.1,
+              crossAxisSpacing: 0.1,
+              childAspectRatio: 0.8,
             ),
-            delegate: SliverChildBuilderDelegate(
-                  (BuildContext context, int index) {
+            delegate: SliverChildBuilderDelegate((BuildContext context, int index) {
+              var post = retorno[index];
                 return Padding(
-                  padding: const EdgeInsets.only(top: 5),
+                  padding: const EdgeInsets.only(top: 3),
                   child: Container(
                     alignment: Alignment.center,
-                    color: Colors.teal[100 * (index % 9)],
-                    child: Text('Grid Item $index'),
+                    child: Image.asset(post['imagem']!, fit: BoxFit.cover,),
                   ),
                 );
               },
-              childCount: 50,
+              childCount: retorno.length,
             ),
           ),
         ],
