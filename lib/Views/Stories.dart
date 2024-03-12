@@ -77,9 +77,9 @@ class _StoriesState extends State<Stories> {
             Positioned(
               bottom: 12,
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 15.0),
+                  padding: const EdgeInsets.only(left: 25.0),
                   child: index == 0 ? const Padding(
-                    padding: EdgeInsets.only(left: 14.0),
+                    padding: EdgeInsets.only(left: 05.0),
                     child: Text('Seu story', style: TextStyle(fontSize: 10)),
                   ) : Text(story['nome']!, style: const TextStyle(fontSize: 10)),
                 ),
